@@ -18,13 +18,15 @@ npm install tailwindcss-border-gradients
 ```js
 {
   theme: {
-    colors: {
-      'red': '#f00',
-      'blue': '#00f',
-    },
-    linearBorderGradients: theme => ({
-      colors: theme('colors'),
-    }),
+    extend: {
+      colors: {
+        'red': '#f00',
+        'blue': '#00f',
+      },
+      linearBorderGradients: theme => ({
+        colors: theme('colors'),
+      }),
+    }
   },
   plugins: [
     require('tailwindcss-border-gradients')(),
